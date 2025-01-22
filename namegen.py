@@ -89,14 +89,17 @@ def main():
     parser.add_argument("-d","--debug", help="Modo debug", action="store_true")
     args = parser.parse_args()
     names = []
-    for i in range(args.number):
-        if "-" in args.size:
-            size = random.randint(int(args.size.split("-")[0]),int(args.size.split("-")[1]))
-        else:
-            size = int(args.size)
-        names.append(Name(size,debug=args.debug))
-        # print(size)
-        print(''.join(names[i].syllables))
+    try:
+        for i in range(args.number):
+            if "-" in args.size:
+                size = random.randint(int(args.size.split("-")[0]),int(args.size.split("-")[1]))
+            else:
+                size = int(args.size)
+            names.append(Name(size,debug=args.debug))
+            # print(size)
+            print(''.join(names[i].syllables))
+    except:
+        print("usage: namegen.py [-h] [-s SIZE] [-n NUMBER] [-d]")
         
 if __name__ == '__main__':
     main()
