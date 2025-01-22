@@ -16,13 +16,17 @@ class Name:
         matrix = [self.start, self.middle,self.end]
         self.syllables = [i for r in matrix for i in r]
 
+    def __str__(self):
+        s = ''.join(self.syllables)
+        return ''.join([s[i] for i in range(len(s)) if i == 0 or s[i] != s[i-1]])
+
     def create_start(self):
         self.log("__start__")
         if random.randint(0,100) <= 20:
-            self.log("used preffered for start")
+            self.log("used preferred for start")
             self.start = random.choice(preferred['start']['2'])
         elif random.randint(0,100) <= 20 and self.size > 3:
-            self.log("used preffered for start")
+            self.log("used preferred for start")
             self.start = random.choice(preferred['start']['3'])
         else:
             self.log("used random for start")
@@ -97,7 +101,7 @@ def main():
                 size = int(args.size)
             names.append(Name(size,debug=args.debug))
             # print(size)
-            print(''.join(names[i].syllables))
+            print(names[i])
     except:
         print("usage: namegen.py [-h] [-s SIZE] [-n NUMBER] [-d]")
         

@@ -1,4 +1,4 @@
-syllables = ["ba","be","bi","bo","bu","ca","ce","ci","co","cu","da","du","fa","fi","fo","fu","ga","gue","gui","go","gu","ja","je","ji","jo","ju","la","lo","lu","ma","mi","mo","mu","na","ne","ni","no","nu","pa","pi","po","pu","qua","quo","ra","ro","ru","sa","ta","to","te","va","ve","vi","vo","vu","vu","za","zo"]
+syllables = ["a","e","i","o","u","ba","be","bi","bo","bu","ca","ce","ci","co","cu","da","du","fa","fi","fo","fu","ga","gue","gui","go","gu","ja","je","ji","jo","ju","la","lo","lu","ma","mi","mo","mu","na","ne","ni","no","nu","pa","pi","po","pu","qua","quo","ra","ro","ru","sa","ta","to","te","va","ve","vi","vo","vu","vu","za","zo"]
 
 preferred = {
     "end":{
