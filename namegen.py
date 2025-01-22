@@ -86,7 +86,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s","--size", help="Tamanho (em sílabas) do nome. Mínimo: 3", type=str)
     parser.add_argument("-n","--number", help="Número de nomes a serem gerados", type=int)
-    parser.add_argument("-d","--debug", help="Número de nomes a serem gerados", action="store_true")
+    parser.add_argument("-d","--debug", help="Modo debug", action="store_true")
     args = parser.parse_args()
     names = []
     for i in range(args.number):
